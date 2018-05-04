@@ -1,0 +1,31 @@
+<div class="student-container">
+  <form [formGroup]="studentFrm" (ngSubmit)="addStudent(student,studentFrm.value)" *ngIf="studentFrm">
+    <div class="row expanded">
+      <div class="small-12 columns">
+        <label>student Id
+          <input type="text" name="title" [formControl]="studentFrm.controls['id']" formControlName="id">
+        </label>
+        <div class="alert" *ngIf="!studentFrm.controls['id'].valid && studentFrm.controls['id'].touched">
+          You must specify a title that's at least 10 characters long.
+        </div>
+
+        <label>Name
+          <textarea name="name" id="name" required [formControl]="studentFrm.controls['name']" formControlName="name"></textarea>
+        </label>
+        <div class="alert" *ngIf="!studentFrm.controls['name'].valid && studentFrm.controls['name'].touched">
+          You must specify content that's at least 10 characters long.
+        </div>
+
+        <label>deartment
+          <textarea name="deartment" id="deartment" required [formControl]="studentFrm.controls['deartment']" formControlName="deartment"></textarea>
+        </label>
+        <div class="alert" *ngIf="!studentFrm.controls['deartment'].valid && studentFrm.controls['deartment'].touched">
+          You must specify content that's at least 10 characters long.
+        </div>
+
+        <input type="submit" class="cta-btn filled" value="Post Student" [disabled]="!studentFrm.valid">
+
+      </div>
+    </div>
+  </form>
+</div>

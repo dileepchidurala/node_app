@@ -1,0 +1,16 @@
+<div *ngIf="stud">
+  <div *ngFor="let s of stud"> 
+    <div class="student-container">
+      <div class="row expanded">
+        <div class="small-12 medium-9 columns">
+          <a routerLink="#">{{ s.name }}</a>
+          <p>{{ s.deartment }}</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+          <a routerLink="/edit/{{ s.stdno}}" class="btns">Edit student data</a>
+          <a (click)="deleteStudent(s.stdno)" class="btns">Delete Student</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="student-container"><a routerLink='#'>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Department
+    </a></div>
+    <style>
+        hr { 
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: 50px;
+            margin-right: 0;
+            border-style: inset;
+            border-left-color: cornflowerblue;
+            border-width: 3px;
+        } 
+        </style>
+    <hr>
+<div *ngFor="let student of students">
+  <div class="student-container">
+    <div class="row expanded">
+      <div class="small-12 medium-3 medium-offset-1 columns">
+        <a routerLink='/students/{{ student.stdno }}'>{{ student.stdno }}</a>
+        
+      </div>
+      <div class="small-12 medium-3 columns">
+          <a routerLink='/students/{{ student.stdno }}'>{{ student.name }}</a>
+      </div>
+      <div class="small-12 medium-3 columns">
+          <a routerLink='/students/{{ student.stdno }}'>{{ student.deartment }}</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
