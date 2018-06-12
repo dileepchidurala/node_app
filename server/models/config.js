@@ -3,7 +3,7 @@ var Teradata = require('node-teradata');
 var config = {
   url: 'jdbc:teradata://10.25.190.23/tmode=ANSI,charset=UTF8',
   username: 'nodeapp',
-  password: 'password',
+  password: '********',
   driver: './jars/',
   minPoolSize: 1,
   maxPoolSize: 100,
