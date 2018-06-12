@@ -1,4 +1,5 @@
 var express = require('express');
+var promise = require('promise');
 var router = express.Router();
 var db = require('../models/config');
 var app = express();
